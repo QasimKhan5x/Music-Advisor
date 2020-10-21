@@ -6,7 +6,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
+        boolean authorized = false;
         while (!exit) {
+            while (!authorized && !exit) {
+                String command = scanner.nextLine();
+                if (command.equals("auth")) {
+                    System.out.println("https://accounts.spotify.com/authorize?" +
+                            "client_id=e7e6267af3a549b986b2fce8371d8ae0" +
+                            "&redirect_uri=http://localhost:8080&response_type=code");
+                    System.out.println("---SUCCESS---");
+                    authorized = true;
+                } else if (command.equals("exit")) {
+                    exit = true;
+                } else {
+                    System.out.println("Please, provide access for application.");
+                }
+            }
+            if (exit)
+                break;
             String command = scanner.nextLine().split(" ")[0];
             switch (command) {
                 case "new": {

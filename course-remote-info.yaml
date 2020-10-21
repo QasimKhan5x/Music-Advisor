@@ -6,18 +6,23 @@ hyperskill_project:
 stages:
 - id: 335
   step: 5477
+  is_completed: true
 - id: 336
   step: 5478
+  is_completed: true
 - id: 337
   step: 5479
+  is_completed: false
 - id: 338
   step: 5480
+  is_completed: false
 - id: 339
   step: 5481
+  is_completed: false
 topics:
   0:
   - title: IDE
-    theory_id: 3805
+    theory_id: 10996
   - title: Introduction to Java
     theory_id: 3500
   - title: Basic literals
